@@ -137,7 +137,7 @@ int     main(void)
     infos_list(list);
     aff_list(list);
     puts("\nMap list->l2");
-    llist_destroy(&l2);
+    //llist_destroy(&l2);
     l2 = llist_map(list, &f2);
     infos_list(l2);
     aff_list(l2);
