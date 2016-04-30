@@ -46,7 +46,7 @@ void        llist_sorted_insert(t_llist *list, void *val, size_t val_size,
 void        llist_sorted_merge(t_llist *list1, t_llist *list2, int (*cmp)());
 void        **llist_to_array(t_llist *list);
 
-t_llist *array_to_llist(void **array, size_t size, size_t val_size);
+t_llist     *array_to_llist(void **array, size_t size, size_t val_size);
 
 /* double linked list */
 /* set */
