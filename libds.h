@@ -29,7 +29,7 @@ int         llist_contains(t_llist *list, const void *val, int (*cmp)());
 int         llist_indexof(t_llist *list, const void *val, int (*cmp)());
 int         llist_last_indexof(t_llist *list, const void *val, int (*cmp)());
 t_llist     *llist_copy(t_llist *list);
-t_llist     *llist_merge(t_llist *list1, t_llist *list2);
+void        llist_merge(t_llist *list1, t_llist *list2);
 int         llist_add_at(t_llist *list, void *val, size_t val_size,
         unsigned int index);
 t_llnode    *llist_get_at(t_llist *list, unsigned int index);
