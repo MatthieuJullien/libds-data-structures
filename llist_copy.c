@@ -8,7 +8,7 @@ t_llist     *llist_copy(t_llist *list)
 
     if (list == NULL)
         return (NULL);
-    copy = (t_llist *)malloc(sizeof(t_llist));
+    copy = llist_create();
     if (copy == NULL)
         return (NULL);
     cur = list->first;
@@ -17,6 +17,5 @@ t_llist     *llist_copy(t_llist *list)
         llist_add_last(copy, cur->val, cur->val_size);
         cur = cur->next;
     }
-    copy->size = list->size;
     return (copy);
 }
