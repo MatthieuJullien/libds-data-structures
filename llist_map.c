@@ -1,4 +1,5 @@
 #include "libds.h"
+#include <stdlib.h>
 
 t_llist *llist_map(t_llist *list, t_llnode *(*f)(t_llnode *))
 {
@@ -16,6 +17,8 @@ t_llist *llist_map(t_llist *list, t_llnode *(*f)(t_llnode *))
     {
         new_node = f(cur);
         llist_add_last(new_list, new_node->val, new_node->val_size);
+        free(new_node->val);
+        free(new_node);
         cur = cur->next;
     }
     return (new_list);
