@@ -10,8 +10,7 @@ int     llist_add_at(t_llist *list, void *val, size_t val_size,
     
     if (index >= list->size)
         return (0);
-    new = llist_create_node(val, val_size);
-    if (new == NULL)
+    if (!(new = llist_create_node(val, val_size)))
         return (0);
     prv = NULL;
     cur = list->first;
@@ -23,7 +22,10 @@ int     llist_add_at(t_llist *list, void *val, size_t val_size,
     }
     if (cur == NULL)
         list->last = new;
-    prv->next = new;
+    if (prv == NULL)
+        list->first = new;
+    else
+        prv->next = new;
     new->next = cur;
     list->size++;
     return (1);

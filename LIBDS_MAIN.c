@@ -54,6 +54,16 @@ int     cmp(char *s1, char *s2)
 
 int     main(void)
 {
+    t_llist   *l1;
+
+    llist_create(&l1);
+    llist_add_last(l1, "2", 2);
+    llist_set_at(l1, "0", 2, 0);
+    infos_list(l1);
+    aff_list(l1);
+    llist_destroy(&l1);
+
+
     puts("\nSUCCESS !!!");
     return (0);
 }
