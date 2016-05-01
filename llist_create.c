@@ -1,7 +1,7 @@
 #include "libds.h"
 #include <stdlib.h>
 
-llist_create(t_llist **list)
+void    llist_create(t_llist **list)
 {
     *list = (t_llist *)malloc(sizeof(t_llist));
     if (*list == NULL)
