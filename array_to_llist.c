@@ -5,7 +5,7 @@ t_llist     *array_to_llist(void **array, size_t size, size_t val_size)
     t_llist     *list;
     size_t      i;
 
-    list = llist_create();
+    llist_create(&list);
     if (list == NULL)
         return (NULL);
     i = 0;

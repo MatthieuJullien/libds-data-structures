@@ -17,7 +17,7 @@ typedef struct      s_llnode
 }                   t_llnode;
 
 /* linked list */
-t_llist     *llist_create(void);
+void        llist_create(t_llist **list);
 t_llnode    *llist_create_node(const void *val, size_t val_size);
 void        llist_add_first(t_llist *list, const void *val, size_t val_size);
 void        llist_rm_first(t_llist *list);

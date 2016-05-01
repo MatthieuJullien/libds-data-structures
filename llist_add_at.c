@@ -8,7 +8,7 @@ int     llist_add_at(t_llist *list, void *val, size_t val_size,
     t_llnode    *prv;
     t_llnode    *cur;
     
-    if (index > list->size)
+    if (index >= list->size)
         return (0);
     new = llist_create_node(val, val_size);
     if (new == NULL)

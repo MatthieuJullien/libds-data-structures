@@ -5,7 +5,7 @@ void    llist_rm_at(t_llist *list, unsigned int index)
     t_llnode    *prv;
     t_llnode    *cur;
 
-    if (index > list->size - 1)
+    if (index >= list->size)
         return ;
     if (index == 0)
     {

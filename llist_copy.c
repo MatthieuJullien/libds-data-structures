@@ -8,7 +8,7 @@ t_llist     *llist_copy(t_llist *list)
 
     if (list == NULL)
         return (NULL);
-    copy = llist_create();
+    llist_create(&copy);
     if (copy == NULL)
         return (NULL);
     cur = list->first;
