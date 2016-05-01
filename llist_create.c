@@ -5,7 +5,7 @@ void    llist_create(t_llist **list)
 {
     *list = (t_llist *)malloc(sizeof(t_llist));
     if (*list == NULL)
-        return (NULL);
+        return ;
     (*list)->size = 0;
     (*list)->first = NULL;
     (*list)->last = NULL;

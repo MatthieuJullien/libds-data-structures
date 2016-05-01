@@ -12,6 +12,7 @@ void    llist_rm_at(t_llist *list, unsigned int index)
         cur = list->first;
         list->first = list->first->next;
         llist_destroy_node(&cur);
+        list->size--;
         return ;
     }
     cur = list->first;

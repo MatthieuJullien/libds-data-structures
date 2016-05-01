@@ -10,7 +10,7 @@ t_llist *llist_map(t_llist *list, t_llnode *(*f)(t_llnode *))
     if (list == NULL || f == NULL)
         return (NULL);
     cur = list->first;
-    new_list = llist_create();
+    llist_create(&new_list);
     if (new_list == NULL)
         return (NULL);
     while (cur)
